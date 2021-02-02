@@ -1,7 +1,8 @@
 import { Music } from './../shared/interfaces';
 import { Observable } from 'rxjs';
 import { MusicService } from './../shared/music.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-rock-page',
@@ -9,16 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rock-page.component.scss']
 })
 export class RockPageComponent implements OnInit {
-musics: Music[]
+musics: Music[] = []
+@Input() music: Music
   // musics$: Observable<Music[]>
+  // music: Music
+  constructor(private musicService: MusicService) { }
 
-  constructor(public musicService: MusicService) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.musicService.getAll()
     // this.musics$ =
-     this.musicService.getAll().subscribe(musics => {
-        this.musics = musics
-     })
+    //  this.musicService.getAll().subscribe(musics => {
+    //     this.musics = musics
+    //  })
+  return this.musicService.getAll().subscribe(musics => {
+     this.musics = musics
+   })
   }
 
 }
