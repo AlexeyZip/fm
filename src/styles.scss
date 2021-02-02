@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./scss/base/base";
+@import "./scss/base/normalize";
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrap {
+    background-color: #1a1919;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:focus {
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}

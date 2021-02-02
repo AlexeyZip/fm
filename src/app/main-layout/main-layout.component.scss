@@ -1,0 +1,26 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.header {
+    background-color: #1a1919;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    .likes {
+        margin-right: 40px;
+    }
+}
+
+.back-btn {
+    background-color: initial;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover {
+        color: #ededee50;
+    }
+}
