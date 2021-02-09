@@ -18,16 +18,17 @@ export class MusicService {
     .pipe(
       map((data: any) => {
         // console.log(data);
-        let musics = (data.albums.album).map(function(key) {
-          console.log(key);
-          return `${key.artist.name}, ${key.name}, ${key.Object}`;
-          // return data.albums.album.map((item) => `${item.name}  : ${item.artist.name} : ${item.image.text}`)
-        }
-      );
+        
+      //   let musics = (data.albums.album).map(function(key) {
+      //     console.log(key);
+      //     return `${key.artist.name}, ${key.name}, ${key.Object}`;
+      //     // return data.albums.album.map((item) => `${item.name}  : ${item.artist.name} : ${item.image.text}`)
+      //   }
+      // );
         // console.log(musics);
-        data = musics;
+        // data = musics;
         // console.log(data);
-        return data;
+        return data.albums.album;
         
         
       })

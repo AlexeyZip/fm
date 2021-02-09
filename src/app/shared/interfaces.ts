@@ -4,6 +4,12 @@ export interface Music {
     artist?: {
         name: string
     }
+    image: [
+        
+            text: string,
+            size: string
+        
+    ]
 }
 
 // export class IMusic implements Music {

@@ -10,11 +10,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./rock-page.component.scss']
 })
 export class RockPageComponent implements OnInit {
-musics: Music[] = []
+// musics: Music[] = []
 // @Input() music: Music
   // musics$: Observable<Music[]>
   // music: Music
   constructor(private musicService: MusicService) { }
+
+  public readonly musics$ = this.musicService.getAll();
 
   ngOnInit() {
     // this.musicService.getAll()
@@ -22,7 +24,7 @@ musics: Music[] = []
     //  this.musicService.getAll().subscribe(musics => {
     //     this.musics = musics
     //  })
-  return this.musicService.getAll().subscribe(data => this.musics = data)
+  // return this.musicService.getAll().subscribe(data => this.musics = data)
   }
 
 

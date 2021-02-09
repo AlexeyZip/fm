@@ -1,9 +1,9 @@
-<div class="" *ngFor="let music of musics">
-    <div class="">{{musics}}</div>
+<!-- <div class="" *ngFor="let music of musics$ | async as musics"> -->
+    <!-- <div class="">{{music.artist}}</div> -->
     <!-- <div class="">{{musics}}</div> -->
-</div>
+<!-- </div> -->
 <!-- <div class="">
     <div class="">{{musics}}</div>
 </div> -->
 
-<app-music-page *ngFor="let music of musics" [music]="music"></app-music-page>
+<app-music-page *ngFor="let music of musics$ | async" [music]="music"></app-music-page>
