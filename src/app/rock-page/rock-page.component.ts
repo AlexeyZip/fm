@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RockPageComponent implements OnInit {
 musics: Music[] = []
-@Input() music: Music
+// @Input() music: Music
   // musics$: Observable<Music[]>
   // music: Music
   constructor(private musicService: MusicService) { }
@@ -22,9 +22,10 @@ musics: Music[] = []
     //  this.musicService.getAll().subscribe(musics => {
     //     this.musics = musics
     //  })
-  return this.musicService.getAll().subscribe(musics => {
-     this.musics = musics
-   })
+  return this.musicService.getAll().subscribe(data => this.musics = data)
   }
+
+
+
 
 }

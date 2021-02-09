@@ -12,6 +12,7 @@ import { HipHopPageComponent } from './hip-hop-page/hip-hop-page.component';
 import { PopPageComponent } from './pop-page/pop-page.component';
 import { RbPageComponent } from './rb-page/rb-page.component';
 import { IndiePageComponent } from './indie-page/indie-page.component';
+import { MusicPageComponent } from './music-page/music-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { IndiePageComponent } from './indie-page/indie-page.component';
     HipHopPageComponent,
     PopPageComponent,
     RbPageComponent,
-    IndiePageComponent
+    IndiePageComponent,
+    MusicPageComponent
   ],
   imports: [
     BrowserModule,
