@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators';
 import { Music } from './interfaces';
@@ -8,10 +9,20 @@ import { Music } from './interfaces';
   providedIn: 'root'
 })
 export class MusicService {
-
-  // music: Music
-
+  
+  music: Music
+   musicLike = []
   constructor(private http: HttpClient) { }
+
+
+ 
+
+
+
+  addMusic(music) {
+    this.musicLike.push(music)
+    
+  }
 
   getRock(): Observable<Music[]> {
     return this.http.get<Music[]>('http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=rock&api_key=b0414dc9024f62cd2a4524179e9b1b15&format=json')

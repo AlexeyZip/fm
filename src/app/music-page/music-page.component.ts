@@ -1,3 +1,4 @@
+import { MusicService } from './../shared/music.service';
 import { Music } from './../shared/interfaces';
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
@@ -11,17 +12,24 @@ export class MusicPageComponent implements OnInit {
 
 @Input() music: Music
 
-  constructor() { }
+  musicLike = this.musicService.musicLike
+
+  constructor( private musicService: MusicService) { }
 
   ngOnInit(): void {
     console.log(this.music);
-    
+  }
+
+  addLike() {
+      this.musicService.addMusic(this.music)
+      this.visibility = !this.visibility
+      console.log(this.music);
   }
 
   visibility: boolean = true
 
   toggle() {
-    this.visibility = !this.visibility
+    
   }
 
 }

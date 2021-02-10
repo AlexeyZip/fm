@@ -1,4 +1,5 @@
 export interface Music {
+    rank?: string; 
     name: string,
     img?: string,
     artist: {

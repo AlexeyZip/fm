@@ -1,3 +1,4 @@
+import { MusicService } from './../shared/music.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.scss']
 })
 export class MainLayoutComponent implements OnInit {
-
-  constructor() { }
-
+  musics = []
+  constructor(private musicService: MusicService) { }
+  
   ngOnInit(): void {
+    this.musics = this.musicService.musicLike
   }
 
 }

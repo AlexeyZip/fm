@@ -13,6 +13,7 @@ export class RbPageComponent implements OnInit {
   public readonly musics$ = this.musicService.getRb();
 
   ngOnInit(): void {
+    
   }
 
 }
