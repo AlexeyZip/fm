@@ -1,3 +1,13 @@
-<div class="card">
-    <div class="">{{music.name}}, {{music.artist.name}}, {{music.image}}</div>
+<div class="card" (click)="toggle()">
+    <div class="info">
+        <div class="name">{{music.name}}, {{music.artist.name}}</div>
+        <div class="like">
+            <mat-icon class="favorite-border" *ngIf="visibility">favorite_border</mat-icon>
+            <mat-icon class="favorite" *ngIf="!visibility">favorite</mat-icon>
+            <!-- <img src="../../assets/img/favorite-white-18dp.svg" width="25px" height="25px" alt=""> -->
+        </div>
+        <!-- <button (click)="toggle()">asd</button> -->
+    </div>
+    <img [src]="music.image['2']['#text']">
+
 </div>

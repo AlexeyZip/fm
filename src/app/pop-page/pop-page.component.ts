@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../shared/music.service';
 
 @Component({
   selector: 'app-pop-page',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private musicService: MusicService) { }
+
+  public readonly musics$ = this.musicService.getPop();
 
   ngOnInit(): void {
   }

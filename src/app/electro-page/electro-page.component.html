@@ -1,1 +1,3 @@
-<p>electro-page works!</p>
+<div class="wrap-p">
+    <app-music-page *ngFor="let music of musics$ | async" [music]="music"></app-music-page>
+</div>

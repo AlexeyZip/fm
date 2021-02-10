@@ -18,4 +18,10 @@ export class MusicPageComponent implements OnInit {
     
   }
 
+  visibility: boolean = true
+
+  toggle() {
+    this.visibility = !this.visibility
+  }
+
 }

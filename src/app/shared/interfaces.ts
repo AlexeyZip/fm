@@ -1,13 +1,13 @@
 export interface Music {
     name: string,
-    img: string,
-    artist?: {
+    img?: string,
+    artist: {
         name: string
     }
     image: [
         
-            text: string,
-            size: string
+            text?: string,
+            size?: string
         
     ]
 }

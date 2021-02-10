@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../shared/music.service';
 
 @Component({
   selector: 'app-indie-page',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndiePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private musicService: MusicService) { }
+
+  public readonly musics$ = this.musicService.getIndie();
 
   ngOnInit(): void {
   }

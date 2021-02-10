@@ -16,9 +16,10 @@ export class RockPageComponent implements OnInit {
   // music: Music
   constructor(private musicService: MusicService) { }
 
-  public readonly musics$ = this.musicService.getAll();
+  public readonly musics$ = this.musicService.getRock();
 
   ngOnInit() {
+    
     // this.musicService.getAll()
     // this.musics$ =
     //  this.musicService.getAll().subscribe(musics => {
