@@ -1,3 +1,4 @@
+import { SearchPipe } from './shared/search.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,12 +16,14 @@ import { PopPageComponent } from './pop-page/pop-page.component';
 import { RbPageComponent } from './rb-page/rb-page.component';
 import { IndiePageComponent } from './indie-page/indie-page.component';
 import { MusicPageComponent } from './music-page/music-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenrePageComponent,
     MainLayoutComponent,
+    SearchPipe,
     RockPageComponent,
     ElectroPageComponent,
     HipHopPageComponent,
@@ -29,7 +32,7 @@ import { MusicPageComponent } from './music-page/music-page.component';
     IndiePageComponent,
     MusicPageComponent,
   ],
-  imports: [CommonModule, BrowserModule, HttpClientModule, AppRoutingModule, MatIconModule],
+  imports: [CommonModule, BrowserModule, HttpClientModule, AppRoutingModule, MatIconModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

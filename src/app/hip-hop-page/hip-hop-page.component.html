@@ -1,3 +1,6 @@
+<input type="text" placeholder="Search" [(ngModel)]="searchStr">
 <div class="wrap-p">
-    <app-music-page *ngFor="let music of musics$ | async" [music]="music"></app-music-page>
+    <app-music-page *ngFor="let music of musics$  | async | searchMusic: searchStr" [music]="music"></app-music-page>
 </div>
+
+<!-- searchMusic: searchStr -->

@@ -1,7 +1,7 @@
 <div class="header">
     <div class="control-container">
         <button class="back-btn" [routerLink]="['genre']">Back</button>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" [(ngModel)]="searchStr">
     </div>
     <div class="likes">
         <img src="../../assets/img/favorite-white-18dp.svg" width="25px" height="25px" alt="">

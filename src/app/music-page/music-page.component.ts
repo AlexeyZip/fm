@@ -19,11 +19,19 @@ export class MusicPageComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.music);
   }
-
+  delete() {
+    this.musicLike = this.musicLike.filter(function(item) {
+      return item !== this.music
+    })
+  }
   addLike() {
       this.musicService.addMusic(this.music)
+      
+      // console.log(this.music);
+      console.log(this.musicLike);
+     
       this.visibility = !this.visibility
-      console.log(this.music);
+      
   }
 
   visibility: boolean = true
